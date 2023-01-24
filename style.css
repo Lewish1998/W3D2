@@ -46,6 +46,7 @@ nav > ul > li {
   font-size: 20px;
   font-style:normal;
   margin-right: 30px;
+  list-style: none;
 }
 /* Now it's time for the navigation links */
 /* Create a CSS block that targets all of the <li> elements that are children of the <nav> element */
@@ -97,10 +98,9 @@ nav > ul > li > a:hover {
 /* display horizontally. The easiest way to make a group of elements horizontal is to use flexbox */
 /* Create a block that targets the search-form class and give it a display of flex */
 
-.input-field[type="search"]{
+.input-field input{
   appearance: none;
-  /* width: 200px; */
-  /* ?????????????? */
+  width: 130px;
 }
 
 /* Notice that each form input is wrapped in a div */
@@ -110,22 +110,30 @@ nav > ul > li > a:hover {
 
 input {
   height: 40px;
-  /* width:????; */
+  /* width:130px */
   padding-left: 100px;
   border-radius: 5px;
   /* Style the form input elements using width, height, padding-left and border-radius */
 }
 
 .nice-select {
-  width: 150px;
+  width: 220px;
   height: 47px;
-  color:grey;
+  /* color:grey; */
   /* Select elements are not imput elements! Therefore we've given the <select> element it's own class  */
   /* They are notoriously difficult to style with css */
   /* In this case you can use width, height, font-size, color, border and border-radius */
 }
 
 .search-btn {
+  background-color: rgb(224, 103, 103);
+  border-color: rgb(224, 103, 103);
+  border-radius: 4px;
+  height: 47px;
+  width:100px;
+  cursor:help;
+  margin-left: 10px;
+
   /* Buttons are probably the most fun to style! The border-radius and cursor properties can quickly make a button look good */
   /* Style the search button using the following properties: */
   /* 
@@ -141,11 +149,14 @@ input {
 }
 
 .container {
+  display: grid;
+  justify-content: center;
   /* The destinations are enclosed in an article element that we want to make a grid */
   /* Set the display property to 'grid' and justify the content */
 }
 
 .row {
+  grid-template-columns: 3fr 3fr 3fr;
   /* The row of the grid has 3 columns which should be the same width and roughly a third of the available space */
   /* Use the grid-template-columns property to set each column to 30% */
   /* You can experiment with different units for the width values */
@@ -153,11 +164,15 @@ input {
 }
 
 .section-title {
+  display: flex;
+  justify-content: center;
   /* The <div> with class section-title contains an <h3> child which we want to center */
   /* The easiest way to center child elements is to set the display property to 'flex' and justify the content */
 }
 
 .single-destination {
+  margin: 4px;
+  overflow: hidden;
   /* Use the margin property to make some space between the destinations */
   /* Set the overflow to 'hidden' */
   /* The overflow CSS shorthand property sets the desired behaviour for an element's overflow 
@@ -165,21 +180,42 @@ input {
 }
 
 img {
+  max-width: 100%;
   /* Set the max-width property to 100% */
 }
 
 /* Let's take the training wheels off. Finish off the page by adding styles to the remaining blocks */
 
 .testimonial-area {
-  /* Write your code here */
+  /* background-color: grey;
+  padding: 15px;
+  display: grid;
+  border: solid black;
+  border-radius: 10px; */
+  background-color: gray;
+  padding: 15px;
+
 }
 
-.single-testmonial{
-  /* Write your code here */
+.single-testmonial {
+  background-color:azure;
+  /* border: black 5px solid; */
+  border-radius: 10px;
+  margin: 30px;
+  padding: 20px;
+  text-align: center;
+
 }
 
 .footer {
-  /* Write your code here */
+  background-color:rgb(4, 4, 65);
+  color: #fff;
+  padding: 10px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .footer-widget p {
